@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shadow-btn {
+    box-shadow: -4px 4px 0px 0px #000000;
+}
+.text-shadow-pink-cyan{
+    text-shadow: -3px 3px #A4036F, -5px 5px #4CC9F0;
+}
+
+.grid-elem {
+    transition: background-color 2s ease-in-out;
+    border: 3px solid black;
+}
+
+.grid-elem:hover {
+    transition-duration: 0s;
+}
+
+.load {
+    transition: transform .5s ease-in-out;
+}
+
+@media screen and (max-width: 535px) {
+    #random-size {
+        margin-top: .8rem;
+    }
+}
+
+@media screen and (max-width: 406px) {
+    .generateBtn {
+        margin-top: .8rem;
+    }
+}

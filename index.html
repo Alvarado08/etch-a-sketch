@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Tomorrow:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="src/app.js" defer></script>
+    <title>Etch-A-Sketch</title>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <main class="w-full max-w-xl flex flex-col items-center justify-center mt-4 mx-5 mb-5">
+        <header class="mb-8">
+            <h1 class="text-4xl font-primary text-shadow-pink-cyan">Etch-A-Sketch</h1>
+        </header>
+        <section class="mb-4">
+            <h3 class="font-secondary font-semibold text-xl underline decoration-[#A4036F] underline-offset-4">Hover over the grid and see the magic unfold</h3>
+        </section>
+        <section class="mb-6">
+            <h3 class="font-secondary font-semibold text-xl underline decoration-[#4CC9F0] underline-offset-4">Generate a custom or random grid size</h3>
+        </section>
+        <section class="mb-6">
+            <article class="flex flex-wrap items-center justify-center space-x-5 sm:space-x-10">
+                <label class="relative block">
+                    <span class="sr-only">Search</span>
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                        <svg id="icon-load" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 load">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+                        </svg>                          
+                    </span>
+                    <input id="input-size" class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-4 shadow-sm focus:outline-none focus:border-black focus:ring-black focus:ring-1 md:text-lg" placeholder="Give me a size(max 100)" type="text" name="search"/>
+                </label>
+                <button id="custom-size" class="w-auto bg-[#cccccc] hover:bg-[#a1a1a1] hover:text-white text-lg font-semibold py-1 px-5 rounded shadow-md shadow-btn focus:outline-none focus:shadow-outline transform hover:scale-105 hover:-translate-y-1 transition duration-300 ease-in-out generateBtn">
+                    Generate
+                </button>                                     
+                <button id="random-size" class="w-auto bg-[#cccccc] hover:bg-[#a1a1a1] hover:text-white text-lg font-semibold py-1 px-5 rounded shadow-md shadow-btn focus:outline-none focus:shadow-outline transform hover:scale-105 hover:-translate-y-1 transition duration-300 ease-in-out generateBtn">
+                    Random
+                </button> 
+            </article>
+        </section>
+        <section>
+            <article id="grid" class="mx-4"></article>
+        </section>
+    </main>
+</body>
+</html>
